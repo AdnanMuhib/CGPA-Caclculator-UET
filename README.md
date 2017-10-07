@@ -1,5 +1,7 @@
 # CGPA-Caclculator-UET
 A Student Subjects Registration System and CGPA Calculator with facility of seeing registered Subjects and<br/> Detailed DMC View. Made on Java and Swing Library of Java for UI.
+## Documentation
+To know about the functionality of each member function use [Documentation](https://adnanmuhib.github.io/CGPA-Caclculator-UET/).
 
 ## Problem Statement (Assignment)
 Write a Java program in which you are required to implement the following design<br />
@@ -60,7 +62,12 @@ desired format and return as a string <br />
 5. Further, you must make a new class named Driver in which you have to define
 main function.
 6. Declare a new object of UetGradeBook in main function
-## Documentation
-To know about the functionality of each member function use [Documentation](https://adnanmuhib.github.io/CGPA-Caclculator-UET/).
+## OUTPUT
+![alt text](https://github.com/AdnanMuhib/CGPA-Caclculator-UET/blob/master/Output/1-MainScreen.PNG) <br />
+![alt text](https://github.com/AdnanMuhib/CGPA-Caclculator-UET/blob/master/Output/2-%20Basic%20Information.PNG) <br />
+![alt text](https://github.com/AdnanMuhib/CGPA-Caclculator-UET/blob/master/Output/3-%20Course%20Adding.PNG) <br />
+![alt text](https://github.com/AdnanMuhib/CGPA-Caclculator-UET/blob/master/Output/4-%20Courses.PNG) <br />
+![alt text](https://github.com/AdnanMuhib/CGPA-Caclculator-UET/blob/master/Output/5-%20CGPA%20View.PNG) <br />
+![alt text](https://github.com/AdnanMuhib/CGPA-Caclculator-UET/blob/master/Output/6-%20DMC.png) <br />
 
 
