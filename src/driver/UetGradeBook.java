@@ -37,7 +37,7 @@ public class UetGradeBook {
     /**
      * Default Constructor
      */
-    public UetGradeBook(){
+    public UetGradeBook() {
         this.StudentName = "";
         this.RegistrationNumber = "";
         this.Degree = "";
@@ -55,17 +55,16 @@ public class UetGradeBook {
      * @return  
      * 
      */
-    public boolean setStudentName(String sName){
+    public boolean setStudentName(String sName) {
         try {
-            if(this.isValidName(sName)){
+            if (this.isValidName(sName)) {
                 this.StudentName = sName;
                 return true;
-            }
-            else{
+            } else {
                 throw new Exception();
             }
             
-        }catch(Exception e){
+        } catch(Exception e) {
             System.out.println("Invalid Student Name Entered , it can't contain numbers or Special characters");
             return false;
         }
@@ -77,21 +76,17 @@ public class UetGradeBook {
      * @param RegNo 
      * @return  
      */
-    public boolean setRegNumber(String RegNo){
+    public boolean setRegNumber(String RegNo) {
         try
         {
             if(this.isValidRegNo(RegNo))
             {
                 this.RegistrationNumber = RegNo.toUpperCase();
                 return true;
-            }
-            else
-            {
+            } else {
                 throw new Exception();
             }
-        }
-        catch(Exception e)
-        {
+        } catch(Exception e) {
             System.out.println("Invalid Registration Number");
             return false;
         }
@@ -104,20 +99,18 @@ public class UetGradeBook {
      * @param degree
      * @return 
      */
-    public boolean setDegree(String degree){
+    public boolean setDegree(String degree) {
         try{
             if(degree.toUpperCase().equals("MS") ||
                degree.toUpperCase().equals("BS") ||
-               degree.toUpperCase().equals("BE")){
+               degree.toUpperCase().equals("BE")) {
             this.Degree = degree.toUpperCase();
             return true;
-            }
-            else{
+            } else {
                 throw new Exception();
 
             }
-        }
-        catch(Exception e ){
+        } catch(Exception e ) {
             System.out.println("Degree Name is Invalid , it must be MS , BS or BE");
             return false;
         }
@@ -128,7 +121,7 @@ public class UetGradeBook {
      * @param course 
      * @return  
      */
-    public boolean setCourse(CourseResult course){
+    public boolean setCourse(CourseResult course) {
         // Object of CourseResult Class is Added to the Courses Array
         this.Courses.add(course);
         return true;
