@@ -38,12 +38,12 @@ public class CourseResult {
      * @param sem 
      * @param marks 
      */
-    public CourseResult(String id, String title, int CH, int sem, int marks){
+    public CourseResult(String id, String title, int CH, int sem, int marks) {
         if(this.isValidCourseID(id) &&
            this.isValidCourseTitle(title) &&
            this.isValidSemester(sem) &&
            this.areValidCreditHours(CH) &&
-           this.areValidMarks(marks)){
+           this.areValidMarks(marks)) {
             this.CourseID = id;
             this.CourseTitle = title;
             this.CreditHours = CH;
@@ -56,7 +56,7 @@ public class CourseResult {
      * copy Constructor 
      * @param CourseRsult 
      */
-    public CourseResult(CourseResult CourseRsult){
+    public CourseResult(CourseResult CourseRsult) {
         this.CourseID = CourseRsult.CourseID;
         this.CourseTitle = CourseRsult.CourseTitle;
         this.CreditHours = CourseRsult.CreditHours;
@@ -70,16 +70,15 @@ public class CourseResult {
      * Setter Method for Course ID
      * @param id 
      */
-    public boolean setCourseID(String id){
+    public boolean setCourseID(String id) {
         try{
-            if(this.isValidCourseID(id)){
+            if (this.isValidCourseID(id)) {
                 this.CourseID = id;
                 return true;
-            }
-            else{
+            } else {
                 throw  new Exception();
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Invalid Course ID Entered");
             return false;
         }
@@ -88,17 +87,15 @@ public class CourseResult {
      * Setter Method for the Course Title
      * @param cTitle 
      */
-    public boolean setCourseTitle(String cTitle){
+    public boolean setCourseTitle(String cTitle) {
         try{
-            if(this.isValidCourseTitle(cTitle)){
+            if(this.isValidCourseTitle(cTitle)) {
                 this.CourseTitle = cTitle;
                 return true;
-            }
-            else{
+            } else {
                 throw  new Exception();
             }
-        }
-        catch(Exception e ){
+        } catch (Exception e ) {
             System.out.println("Invalid Course Title Entered");
             return false;
         }
@@ -107,17 +104,15 @@ public class CourseResult {
      * Setter Method for Credit Hours
      * @param cHours 
      */
-    public boolean setCreditHours(int cHours){
+    public boolean setCreditHours(int cHours) {
         try{
-            if(this.areValidCreditHours(cHours)){
+            if(this.areValidCreditHours(cHours)) {
                 this.CreditHours = cHours;
                 return true;
-            }
-            else{
+            } else {
                 throw new Exception();
             }
-        }
-        catch(Exception e){
+        } catch(Exception e) {
             System.out.println("Invalid Credit Hours Entered");
             return false;
         }
@@ -127,16 +122,15 @@ public class CourseResult {
      * setter method for Marks
      * @param Marks 
      */
-    public boolean setMarks(int Marks){
+    public boolean setMarks(int Marks) {
         try{
-            if(this.areValidMarks(Marks)){
+            if(this.areValidMarks(Marks)) {
                 this.Marks = Marks;
                 return true;
-            }
-            else{
+            } else {
                 throw new Exception();
             }
-        }catch(Exception e){
+        } catch(Exception e) {
             System.out.println("Invalid Marks Entered");
             return false;
         }
@@ -146,18 +140,16 @@ public class CourseResult {
      * Setter Method for Semester
      * @param Sem 
      */
-    public boolean setSemester(int Sem){
+    public boolean setSemester(int Sem) {
         try{
-            if(this.isValidSemester(Sem)){
+            if(this.isValidSemester(Sem)) {
                 this.Semester = Sem;
                 return true;
-            }
-            else{
+            } else {
                 throw new Exception();
                 
             }
-        }
-        catch(Exception e){
+        } catch(Exception e) {
             System.out.println("Invalid Semseter Entered it be 1-8");
             return false;
         }
@@ -169,35 +161,35 @@ public class CourseResult {
      * Getter Method for Course ID
      * @return String
      */
-    public String getCourseID(){
+    public String getCourseID() {
         return this.CourseID;
     }
     /**
      * Getter Method for Course Title
      * @return String
      */
-    public String getCourseTitle(){
+    public String getCourseTitle() {
         return this.CourseTitle;
     }
     /**
      * getter method for Credit Hours
      * @return  integer
      */
-    public int getCreditHours(){
+    public int getCreditHours() {
         return this.CreditHours;
     }
     /**
      * getter method for Marks
      * @return integer
      */
-    public int getMarks(){
+    public int getMarks() {
         return this.Marks;
     }
     /**
      * getter method for Semester
      * @return  integer
      */
-    public int getSemester(){
+    public int getSemester() {
         return this.Semester;
     }
     
@@ -207,7 +199,7 @@ public class CourseResult {
      * @return double
      */ 
     
-    public double getGradePoints(){
+    public double getGradePoints() {
         // get the grade from getGrade() method
         String grade = this.getGrade();
         // return Course Points on basis of Grade
@@ -257,29 +249,22 @@ public class CourseResult {
      * function to get the grade of Subject
      * @return String
      */
-    public String getGrade(){
-        if(this.Marks < 40){
+    public String getGrade() {
+        if(this.Marks < 40) {
             return "F";
-        }
-        else if(this.Marks < 50){
+        } else if (this.Marks < 50) {
             return "D";
-        }
-        else if(this.Marks < 55){
+        } else if (this.Marks < 55) {
             return "C";
-        }
-        else if(this.Marks < 60){
+        } else if (this.Marks < 60) {
             return "C+";
-        }
-        else if(this.Marks < 65){
+        } else if (this.Marks < 65) {
             return "B-";
-        }
-        else if(this.Marks < 70){
+        } else if (this.Marks < 70) {
             return "B+";
-        }
-        else if(this.Marks <= 80){
+        } else if (this.Marks <= 80) {
             return "A-";
-        }
-        else if(this.Marks > 80){
+        } else if (this.Marks > 80) {
             return "A";
         }
         return "";
@@ -289,7 +274,7 @@ public class CourseResult {
      * @return String
      */ 
     @Override
-    public String toString(){
+    public String toString() {
         return "CourseResult{" + "CourseID=" + CourseID + ", CourseTitle=" + CourseTitle + 
                 ", CreditHours=" + CreditHours + ", Semester=" + Semester + ", Marks=" + Marks + '}';
     }
@@ -307,17 +292,17 @@ public class CourseResult {
      * @return boolean
      */
     private boolean isValidCourseID(String cID) {
-        if(cID.length() >= 2 && cID.length() <=8){
+        if(cID.length() >= 2 && cID.length() <=8) {
             // if first two or three charactes are alphabets 
             if(cID.substring(0, 2).chars().allMatch(Character::isLetter) ||
-                    cID.substring(0, 3).chars().allMatch(Character::isLetter)){
+                    cID.substring(0, 3).chars().allMatch(Character::isLetter)) {
                 if(cID.length() > 3){
                     if(cID.substring(2,5).chars().allMatch(Character::isDigit)||
-                            cID.substring(3,6).chars().allMatch(Character::isDigit)){
+                            cID.substring(3,6).chars().allMatch(Character::isDigit)) {
                         return true;
                     }        
                 }
-                else if(cID.length()==7 && Pattern.matches("a-zA-Z", "" + cID.charAt(6))){
+                else if(cID.length() ==7 && Pattern.matches("a-zA-Z", "" + cID.charAt(6))) {
                     return true;
                 }
             }
@@ -331,8 +316,8 @@ public class CourseResult {
      * @param cTitle
      * @return boolean
      */
-    private boolean isValidCourseTitle(String cTitle){
-        if(cTitle.length() >= 7 && cTitle.length() < 35){
+    private boolean isValidCourseTitle(String cTitle) {
+        if(cTitle.length() >= 7 && cTitle.length() < 35) {
             Pattern p = Pattern.compile("[^A-Za-z ]");
             Matcher m = p.matcher(cTitle);
             boolean b = m.find();
@@ -349,8 +334,8 @@ public class CourseResult {
      * @param Marks
      * @return boolean
      */
-    private boolean areValidCreditHours(int CH){
-        if(CH >= 1 && CH <= 3){
+    private boolean areValidCreditHours(int CH) {
+        if(CH >= 1 && CH <= 3) {
             return true;
         }
         return false;
@@ -361,7 +346,7 @@ public class CourseResult {
      * @return boolean
      */
     
-    private boolean isValidSemester( int sem){
+    private boolean isValidSemester( int sem) {
         if(sem >= 1 && sem <= 8){
             return true;
         }
@@ -373,9 +358,9 @@ public class CourseResult {
      * @param marks
      * @return boolean
      */
-    private boolean areValidMarks(int marks){
+    private boolean areValidMarks(int marks) {
         
-        if(marks >= 0 && marks <= 100){
+        if(marks >= 0 && marks <= 100) {
             return true;
         }
         return false;
